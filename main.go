@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"net/http"
+	// "net/http"
+	"os"
 )
 
 /*
@@ -16,4 +17,13 @@ POST /beer/[:id]/review - create a new review for beer
 
 func main() {
 	fmt.Println("Hello world!")
+
+	cmd := os.Args[0]
+
+	fmt.Printf("Program Name: %s\n", cmd)
+
+	argCount := len(os.Args[1:])
+
+	fmt.Printf("Total Arguments (excluding program name): %d\n", argCount)
+
 }
